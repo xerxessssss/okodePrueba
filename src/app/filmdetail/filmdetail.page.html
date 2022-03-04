@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle de la película</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="filmlist"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <div *ngIf="film">
+          <ion-card>
+            <ion-card-content>
+              <ion-card-title class="ion-text-center">
+                {{film.title}}
+              </ion-card-title>
+              <br><img src="{{'https://image.tmdb.org/t/p/original/'+film.poster_path}}" alt="">
+              <p>{{'Valoración media: ' + film.vote_average}}</p>
+              <p>{{'Fecha de estreno: ' + film.release_date}}</p>
+              <p>{{'Lengua original: ' + film.original_language}}</p>
+              <p>{{'Sinopsis: ' + film.overview}}</p>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
