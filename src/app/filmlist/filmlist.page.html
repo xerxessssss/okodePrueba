@@ -8,6 +8,10 @@
 </ion-header>
 
 <ion-content>
+  <ion-searchbar 
+  animated (keyup.enter)="buscar(searchTerm)"
+  placeholder="Pulsa ENTER para buscar"
+  showCancelButton="focus"></ion-searchbar>
   <ion-grid>
     <ion-row>
       <ion-col sizeMd="4" offsetMd="4">
@@ -18,7 +22,9 @@
             </ion-avatar>
             <ion-label>{{film.title}}</ion-label>
           </ion-item>
-        </ion-list>
+          <ion-button id="ant" color="sucess" (click)="anterior()">Anterior</ion-button>
+          <ion-button color="sucess" (click)="siguiente()">Siguiente</ion-button>
+        </ion-list> 
       </ion-col>
     </ion-row>
   </ion-grid>

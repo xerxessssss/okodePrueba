@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -13,7 +14,8 @@ import { FilmlistPage } from './filmlist.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    FilmlistPageRoutingModule
+    FilmlistPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [FilmlistPage]
 })
